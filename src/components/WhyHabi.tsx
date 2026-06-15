@@ -61,7 +61,7 @@ export default function WhyHabi() {
               </motion.div>
             </div>
             <div className="flex flex-col items-start justify-center px-3 py-8 sm:px-10 sm:py-10 min-[810px]:px-10 min-[1200px]:px-12">
-              <h3 className="text-[20px] font-semibold leading-[1.2] tracking-[-0.02em]">
+              <h3 className="text-xl font-normal leading-[1.2] tracking-[-0.02em]">
                 Your agent. Two markets. Infinite setups.
               </h3>
               <p className="mt-4 max-w-[350px] text-base leading-[1.3] text-white/45">
@@ -120,18 +120,26 @@ export default function WhyHabi() {
           </article>
 
           <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#121110] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-32 min-[810px]:grid min-[810px]:grid-cols-[3fr_2fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
-            <div className="relative aspect-[1.05/1] overflow-hidden rounded-lg sm:aspect-[1.327/1]">
+            <div className="relative aspect-[1.05/1] overflow-hidden rounded-[8px] sm:aspect-[1.35/1] min-[810px]:aspect-auto min-[810px]:min-h-0">
               <Image
-                src="/images/feature-panel.png"
-                alt="24 hour market automation"
+                src="/images/private-agent.png"
+                alt=""
                 fill
-                sizes="(max-width: 809px) 100vw, 60vw"
+                sizes="(max-width: 809px) calc(100vw - 64px), 610px"
                 className="object-cover"
               />
               <motion.div
-                style={{ y: clockY }}
-                className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08),transparent_34%)]"
-              />
+                style={{ y: terminalY }}
+                className="absolute bottom-[7%] left-8 right-0 top-[-8] overflow-hidden bg-black shadow-[0_24px_70px_rgba(0,0,0,0.55)]"
+              >
+                <Image
+                  src="/images/feature-panel.png"
+                  alt="24 hour market automation"
+                  fill
+                  sizes="(max-width: 809px) 100vw, 60vw"
+                  className="object-cover"
+                />
+              </motion.div>
             </div>
             <div className="flex flex-col items-start justify-center px-4 py-8 min-[810px]:px-8">
               <h3 className="text-xl font-normal leading-[1.2] tracking-[-0.02em]">

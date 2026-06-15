@@ -47,7 +47,7 @@ export default function Features() {
               role="tab"
               aria-selected={activeIndex === index}
               onClick={() => setActiveIndex(index)}
-              className={`relative rounded-lg px-3 py-3 text-left text-sm font-medium transition-colors min-[640px]:min-w-[92px] min-[640px]:px-4 min-[640px]:text-center min-[810px]:text-base ${
+              className={`relative rounded-lg px-3 py-3 text-left text-sm font-medium transition-colors min-[640px]:min-w-[92px] min-[640px]:px-4 min-[640px]:text-center min-[810px]:text-sm ${
                 activeIndex === index
                   ? "text-white"
                   : "text-white hover:text-white"

@@ -73,7 +73,7 @@ export default function Benefits() {
     >
       <div className="mx-auto w-full max-w-[1120px]">
         <div className="max-w-3xl">
-          <p className="text-base leading-none tracking-[-0.02em] text-white/40">
+          <p className="text-[14px] leading-none tracking-[-0.02em] text-white/40">
             {"// Benefits"}
           </p>
           <h2 className="mt-5 text-[32px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
@@ -85,12 +85,12 @@ export default function Benefits() {
           {benefits.map((benefit) => (
             <article
               key={benefit.title}
-              className="flex min-h-[245px] flex-col rounded-[9px] bg-[#151414] p-5 transition-colors duration-300 hover:bg-[#191818] sm:min-h-[263px] sm:p-6"
+              className="flex min-h-[245px] flex-col rounded-[9px] bg-[#151414] p-5 transition-colors duration-300 hover:bg-[#191818] sm:min-h-[190px] sm:p-6"
             >
-              <span className="grid size-16 place-items-center rounded-full bg-[#080808] text-[#f4f4f2] sm:size-[77px]">
+              <span className="grid size-12 place-items-center rounded-full bg-[#080808] text-[#f4f4f2] sm:size-[64px]">
                 <Icon name={benefit.icon} />
               </span>
-              <h3 className="mt-auto pt-8 text-[19px] font-semibold leading-[1.2] tracking-[-0.025em] sm:text-[20px]">
+              <h3 className="mt-auto pt-8 text-[16px] font-semibold leading-[1.2] tracking-[-0.025em] sm:text-[16px]">
                 {benefit.title}
               </h3>
               <p className="mt-2.5 max-w-[360px] text-base leading-[1.3] text-white/45">

@@ -22,7 +22,7 @@ export default function Hero() {
                 delay: 0.1 + index * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[56px] font-bold leading-[1.2] tracking-[-0.03em] text-white min-[1200px]:leading-none"
+              className="text-[56px] font-semibold leading-[1.2] tracking-[-0.03em] text-white min-[1200px]:leading-none"
             >
               {line}
             </motion.h1>
@@ -39,7 +39,7 @@ export default function Hero() {
                 delay: 0.1 + index * 0.07,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[36px] font-normal leading-[1.15] tracking-[-0.03em] text-white min-[390px]:text-[40px] min-[390px]:leading-[48px]"
+              className="text-[36px] font-semibold leading-[1.15] tracking-[-0.03em] text-white min-[390px]:text-[40px] min-[390px]:leading-[48px]"
             >
               {line}
             </motion.h1>

@@ -85,7 +85,7 @@ export default function Footer() {
       <div className="mx-auto grid w-full max-w-[1120px] gap-12 min-[810px]:grid-cols-[1fr_auto] min-[810px]:items-start min-[810px]:gap-16 min-[1200px]:gap-28">
         <div>
           <HabiBrand brandName="Exact" />
-          <p className="mt-5 max-w-[360px] text-base leading-[1.3] text-[#858585]">
+          <p className="mt-5 max-w-[360px] text-[14px] leading-[1.3] text-[#858585]">
             The AI code editor built for precision.
             <br />
             Write less, build more, ship faster.
@@ -98,7 +98,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={social.label}
-                className="text-white/90 transition-colors hover:text-white"
+                className="text-white/90 transition-colors text-xl hover:text-white"
               >
                 {social.icon}
               </a>

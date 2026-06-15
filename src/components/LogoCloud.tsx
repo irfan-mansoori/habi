@@ -105,10 +105,7 @@ function CompanyLogo({ name }: { name: LogoName }) {
 
 export default function LogoCloud() {
   return (
-    <section
-      id="logos"
-      className="flex px-4 py-16 sm:px-6 sm:py-20 min-[810px]:min-h-[650px] min-[810px]:items-center min-[810px]:py-24"
-    >
+    <section id="logos" className="flex px-4 py-16 sm:px-6  min-[810px]:py-24">
       <div className="mx-auto w-full max-w-[1120px]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

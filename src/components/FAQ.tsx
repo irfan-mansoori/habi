@@ -14,10 +14,10 @@ export default function FAQ() {
     >
       <div className="mx-auto grid w-full max-w-[1120px] min-w-0 gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] lg:gap-14">
         <div className="min-w-0">
-          <p className="text-base leading-none tracking-[-0.02em] text-white/40">
+          <p className="text-[14px] leading-none tracking-[-0.02em] text-white/40">
             {"// FAQ"}
           </p>
-          <h2 className="mt-5 text-[32px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
+          <h2 className="mt-5 text-[36px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
             Questions?{" "}
             <span className="text-white/40">We&apos;ve got answers.</span>
           </h2>
@@ -37,7 +37,7 @@ export default function FAQ() {
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
                   aria-controls={answerId}
-                  className="flex min-h-[60px] w-full cursor-pointer items-center justify-between gap-3 px-4 py-4 text-left text-base font-semibold leading-tight text-[#f1f1ef] transition-colors hover:bg-white/[0.025] sm:min-h-[63px] sm:gap-5 sm:px-5 sm:text-[20px]"
+                  className="flex min-h-[60px] w-full cursor-pointer items-center justify-between gap-3 px-4 py-4 text-left text-[14px] font-semibold leading-tight text-[#f1f1ef] transition-colors hover:bg-white/[0.025] sm:min-h-[63px] sm:gap-5 sm:px-5 sm:text-[16px]"
                 >
                   {faq.question}
                   <span
@@ -59,7 +59,7 @@ export default function FAQ() {
                       className="overflow-hidden"
                       id={answerId}
                     >
-                      <p className="max-w-[540px] px-5 pb-5 text-[15px] leading-[1.55] text-white/50 sm:text-base">
+                      <p className="max-w-[540px] px-5 pb-5 text-[12px] leading-[1.55] text-white/50 sm:text-[14px]">
                         {faq.answer}
                       </p>
                     </motion.div>
