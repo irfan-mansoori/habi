@@ -67,10 +67,7 @@ function Icon({ name }: { name: BenefitIcon }) {
 
 export default function Benefits() {
   return (
-    <section
-      id="benefits"
-      className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:py-[110px]"
-    >
+    <section id="benefits" className="scroll-mt-24 px-4  sm:px-6  ">
       <div className="mx-auto w-full max-w-[1120px]">
         <div className="max-w-3xl">
           <p className="text-[14px] leading-none tracking-[-0.02em] text-white/40">
@@ -85,7 +82,7 @@ export default function Benefits() {
           {benefits.map((benefit) => (
             <article
               key={benefit.title}
-              className="flex min-h-[245px] flex-col rounded-[9px] bg-[#151414] p-5 transition-colors duration-300 hover:bg-[#191818] sm:min-h-[190px] sm:p-6"
+              className="flex min-h-[245px] flex-col rounded-[9px] bg-[#171615] p-5 transition-colors duration-300 hover:bg-[#191818] sm:min-h-[190px] sm:p-6"
             >
               <span className="grid size-12 place-items-center rounded-full bg-[#080808] text-[#f4f4f2] sm:size-[64px]">
                 <Icon name={benefit.icon} />

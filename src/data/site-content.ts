@@ -29,6 +29,14 @@ export const coreFeatures = [
   },
 ];
 
+export const featureUseCase = {
+  eyebrow: "Full-stack development",
+  description:
+    "Build frontend and backend seamlessly. Exact understands your entire stack—from React components to database queries—and helps you ship faster with context-aware suggestions.",
+  cta: "Start building",
+  href: "#pricing",
+};
+
 export const benefits = [
   {
     title: "Receipt For Everything",
