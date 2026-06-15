@@ -13,13 +13,12 @@ export default function WhyHabi() {
   const headingY = useTransform(scrollYProgress, [0, 0.45], [24, -18]);
   const terminalY = useTransform(scrollYProgress, [0, 0.55], [18, -18]);
   const chatY = useTransform(scrollYProgress, [0.2, 0.8], [38, -38]);
-  const clockY = useTransform(scrollYProgress, [0.4, 1], [42, -42]);
 
   return (
     <section
       ref={sectionRef}
       id="why-habi"
-      className="relative scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 min-[1200px]:py-24"
+      className="relative  px-4 sm:px-6  "
     >
       <div className="mx-auto w-full max-w-[1120px]">
         <motion.div
@@ -38,7 +37,7 @@ export default function WhyHabi() {
         </motion.div>
 
         <div className="space-y-6 min-[810px]:space-y-16">
-          <article className="relative flex flex-col overflow-hidden rounded-[12px] bg-[#151414] p-2.5 sm:p-4 min-[810px]:sticky min-[810px]:top-24 min-[810px]:grid min-[810px]:min-h-[486px] min-[810px]:grid-cols-[1.22fr_0.98fr] min-[810px]:items-stretch">
+          <article className="relative flex flex-col overflow-hidden rounded-[12px] bg-[#171615] p-2.5 sm:p-4 min-[810px]:sticky min-[810px]:top-24 min-[810px]:grid min-[810px]:min-h-[486px] min-[810px]:grid-cols-[1.22fr_0.98fr] min-[810px]:items-stretch">
             <div className="relative aspect-[1.05/1] overflow-hidden rounded-[8px] sm:aspect-[1.35/1] min-[810px]:aspect-auto min-[810px]:min-h-0">
               <Image
                 src="/images/private-agent.png"
@@ -78,7 +77,7 @@ export default function WhyHabi() {
             </div>
           </article>
 
-          <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#121110] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-28 min-[810px]:grid min-[810px]:grid-cols-[2fr_3fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
+          <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#171615] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-28 min-[810px]:grid min-[810px]:grid-cols-[2fr_3fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
             <div className="flex flex-col items-start justify-center px-4 py-8 min-[810px]:px-8">
               <h3 className="text-xl font-normal leading-[1.2] tracking-[-0.02em]">
                 Private by default. Powerful by design.
@@ -119,7 +118,7 @@ export default function WhyHabi() {
             </div>
           </article>
 
-          <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#121110] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-32 min-[810px]:grid min-[810px]:grid-cols-[3fr_2fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
+          <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#171615] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-32 min-[810px]:grid min-[810px]:grid-cols-[3fr_2fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
             <div className="relative aspect-[1.05/1] overflow-hidden rounded-[8px] sm:aspect-[1.35/1] min-[810px]:aspect-auto min-[810px]:min-h-0">
               <Image
                 src="/images/private-agent.png"

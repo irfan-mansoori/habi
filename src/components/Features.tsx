@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { coreFeatures } from "@/src/data/site-content";
+import { coreFeatures, featureUseCase } from "@/src/data/site-content";
 
 export default function Features() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,7 +12,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 min-[810px]:px-10 min-[810px]:py-24 min-[1200px]:py-28"
+      className="scroll-mt-24 px-4  sm:px-6  min-[810px]:px-10 min-[810px]:py-24 min-[1200px]:py-28"
     >
       <div className="mx-auto w-full max-w-[1120px]">
         <motion.div
@@ -38,7 +38,7 @@ export default function Features() {
           transition={{ duration: 0.65, delay: 0.08 }}
           role="tablist"
           aria-label="Core features"
-          className="mt-10 grid w-full grid-cols-2 gap-1 rounded-xl bg-[#121212] p-1.5 sm:mt-12 min-[640px]:mt-14 min-[640px]:flex min-[640px]:w-fit"
+          className="mt-10 grid w-full grid-cols-2 gap-1 rounded-xl bg-[#171615] p-1.5 sm:mt-12 min-[640px]:mt-14 min-[640px]:flex min-[640px]:w-fit"
         >
           {coreFeatures.map((feature, index) => (
             <button
@@ -47,7 +47,7 @@ export default function Features() {
               role="tab"
               aria-selected={activeIndex === index}
               onClick={() => setActiveIndex(index)}
-              className={`relative rounded-lg px-3 py-3 text-left text-sm font-medium transition-colors min-[640px]:min-w-[92px] min-[640px]:px-4 min-[640px]:text-center min-[810px]:text-sm ${
+              className={`relative rounded-lg px-2 py-2 text-left text-sm font-medium transition-colors min-[640px]:min-w-[92px] min-[640px]:px-4 min-[640px]:text-center min-[810px]:text-sm ${
                 activeIndex === index
                   ? "text-white"
                   : "text-white hover:text-white"
@@ -70,7 +70,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, delay: 0.16 }}
-          className="relative mt-4 aspect-[1.05/1] overflow-hidden rounded-lg bg-[#111] sm:mt-6 sm:aspect-[1.4/1] min-[810px]:aspect-[1.784/1]"
+          className="relative mt-4 aspect-[1.05/1] overflow-hidden rounded-lg bg-[#111] sm:mt-6  min-[810px]:aspect-[1.784/1]"
         >
           <Image
             src="/images/feature-wide.png"
@@ -87,7 +87,7 @@ export default function Features() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.99 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-x-[4%] bottom-[-1%] top-[7%] overflow-hidden rounded-md border border-white/10 bg-black shadow-[0_30px_90px_rgba(0,0,0,0.65)] sm:inset-x-[6.5%] sm:top-[10.5%] sm:rounded-lg"
+              className="absolute inset-x-[4%] bottom-[-1%] top-[0%] overflow-hidden rounded-md border border-white/10  sm:rounded-lg"
             >
               <Image
                 src={activeFeature.image}
@@ -98,6 +98,29 @@ export default function Features() {
               />
             </motion.div>
           </AnimatePresence>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.65 }}
+          className="grid min-h-[230px] items-start gap-8 border-b border-white/[0.04]  min-[810px]:grid-cols-[minmax(0,1fr)_auto] min-[810px]:items-center min-[810px]:gap-14  "
+        >
+          <div className="min-w-0">
+            <p className="text-base leading-[1.3] text-[#858585]">
+              {featureUseCase.eyebrow}
+            </p>
+            <p className="mt-6 max-w-[910px] text-[20px] font-normal leading-[1.22] tracking-[-0.03em] text-[#f4f4f2] sm:text-[20px] min-[1200px]:text-[30px]">
+              {featureUseCase.description}
+            </p>
+          </div>
+          <a
+            href={featureUseCase.href}
+            className="inline-flex w-fit shrink-0 rounded-[10px] bg-white p-[7px] text-base font-medium text-[#111] transition-transform hover:scale-[1.025]"
+          >
+            {featureUseCase.cta}
+          </a>
         </motion.div>
       </div>
     </section>
