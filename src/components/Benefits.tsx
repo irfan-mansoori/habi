@@ -67,8 +67,8 @@ function Icon({ name }: { name: BenefitIcon }) {
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="scroll-mt-24 px-4  sm:px-6  ">
-      <div className="mx-auto w-full max-w-[1120px]">
+    <section id="benefits" className="scroll-mt-24 px-4 sm:px-6 pt-10 sm:pt-0">
+      <div className="mx-auto w-full max-w-[1080px]">
         <div className="max-w-3xl">
           <p className="text-[14px] leading-none tracking-[-0.02em] text-white/40">
             {"// Benefits"}
@@ -82,12 +82,12 @@ export default function Benefits() {
           {benefits.map((benefit) => (
             <article
               key={benefit.title}
-              className="flex min-h-[245px] flex-col rounded-[9px] bg-[#171615] p-5 transition-colors duration-300 hover:bg-[#191818] sm:min-h-[190px] sm:p-6"
+              className="flex min-h-auto flex-col rounded-[9px] bg-[#171615] p-5 transition-colors duration-300 hover:bg-[#191818] sm:min-h-[190px] sm:p-6"
             >
               <span className="grid size-12 place-items-center rounded-full bg-[#080808] text-[#f4f4f2] sm:size-[64px]">
                 <Icon name={benefit.icon} />
               </span>
-              <h3 className="mt-auto pt-8 text-[16px] font-semibold leading-[1.2] tracking-[-0.025em] sm:text-[16px]">
+              <h3 className="mt-auto pt-3 sm:pt-8 text-[16px] font-medium leading-[1.2] tracking-[-0.025em]">
                 {benefit.title}
               </h3>
               <p className="mt-2.5 max-w-[360px] text-base leading-[1.3] text-white/45">

@@ -12,12 +12,12 @@ export default function FAQ() {
       id="faq"
       className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[760px] lg:py-[70px]"
     >
-      <div className="mx-auto grid w-full max-w-[1120px] min-w-0 gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] lg:gap-14">
+      <div className="mx-auto grid w-full max-w-[1080px] min-w-0 gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] lg:gap-14">
         <div className="min-w-0">
           <p className="text-[14px] leading-none tracking-[-0.02em] text-white/40">
             {"// FAQ"}
           </p>
-          <h2 className="mt-5 text-[36px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
+          <h2 className="mt-5 text-[32px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
             Questions?{" "}
             <span className="text-white/40">We&apos;ve got answers.</span>
           </h2>

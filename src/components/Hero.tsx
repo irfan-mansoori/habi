@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const desktopLines = ["AI agents", "that trade the way you do."];
-const mobileLines = ["AI agents", "that trade", "the way", "you do."];
+const mobileLines = ["AI agents", "that trade the way you do."];
 
 export default function Hero() {
   return (
@@ -39,7 +39,7 @@ export default function Hero() {
                 delay: 0.1 + index * 0.07,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[36px] font-semibold leading-[1] tracking-[-0.03em] text-white min-[390px]:text-[40px] min-[390px]:leading-[48px]"
+              className="text-[36px] px-4 leading-[1.2] tracking-[-0.03em] text-white min-[390px]:text-[40px] min-[390px]:leading-[48px]"
             >
               {line}
             </motion.h1>
@@ -49,7 +49,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.6 }}
-          className="mx-auto mt-4 max-w-[40%] px-1 text-base leading-[1.4] text-white/50"
+          className="mx-auto mt-4 sm:max-w-[40%] px-1 text-base leading-[1.4] text-white/50"
         >
           Privacy-focused trading agents that monitor markets, understand
           intent, manage risk, and execute trades.
@@ -70,7 +70,7 @@ export default function Hero() {
           transition={{ delay: 0.75, duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative mt-14 overflow-hidden rounded-xl p-1.5 shadow-[0_60px_160px_rgba(0,0,0,0.75)] sm:mt-18 sm:rounded-2xl sm:p-0"
         >
-          <div className="relative aspect-[1.12/1] overflow-hidden rounded-lg sm:aspect-[1.8/1] sm:rounded-xl min-[810px]:aspect-[1.78/1]">
+          <div className="relative aspect-[1.8/1] overflow-hidden rounded-lg sm:aspect-[1.8/1] sm:rounded-xl min-[810px]:aspect-[1.78/1]">
             <Image
               src="/images/hero-dashboard.png"
               alt="Golden landscape"

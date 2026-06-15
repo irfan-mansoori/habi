@@ -52,7 +52,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
-            className="mx-auto max-h-[calc(100dvh-64px)] max-w-[1120px] overflow-y-auto border-t border-white/10 bg-[#080808] py-3 shadow-2xl lg:hidden"
+            className="mx-auto max-h-[calc(100dvh-64px)] max-w-[1080px] overflow-y-auto border-t border-white/10 bg-[#080808] py-3 shadow-2xl lg:hidden"
           >
             {navItems.map((item) => (
               <a
