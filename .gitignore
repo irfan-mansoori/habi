@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/.chrome-strategy/
 
 # next.js
 /.next/
