@@ -15,7 +15,7 @@ export default function Home() {
       <main className="overflow-clip">
         <Hero />
         <LogoCloud />
-        <WhyHabi />
+        {/* <WhyHabi /> */}
         <Features />
         <Benefits />
         <FAQ />

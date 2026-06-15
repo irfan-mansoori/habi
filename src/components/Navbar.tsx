@@ -16,10 +16,10 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[9999] border-b border-white/[0.04] bg-[#080808] px-4 sm:px-6 min-[810px]:px-10">
-      <nav className="mx-auto flex h-16 max-w-[1120px] items-center justify-between px-0 text-white">
+    <header className="fixed inset-x-0 top-0 z-[9999] bg-[#0a0908] px-4 sm:px-6 min-[810px]:px-10">
+      <nav className="mx-auto flex h-16 max-w-[1080px] items-center justify-between px-0 text-white">
         <HabiBrand compact />
-        <div className="hidden items-center gap-2 text-base text-[#dedede] lg:flex xl:gap-4">
+        <div className="hidden items-center gap-2 text-base text-[#dedede] lg:flex xl:gap-4 pl-8">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -32,7 +32,7 @@ export default function Navbar() {
         </div>
         <a
           href="#pricing"
-          className="hidden rounded-lg bg-white px-4 py-2 text-base font-medium text-black transition-transform hover:scale-[1.03] lg:block"
+          className="hidden rounded-lg bg-white px-2 py-2 leading-none text-base font-medium text-black transition-transform hover:scale-[1.03] lg:block"
         >
           Get Started
         </a>
