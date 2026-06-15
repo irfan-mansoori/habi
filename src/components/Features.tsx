@@ -12,9 +12,9 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="scroll-mt-24 px-4  sm:px-6  min-[810px]:px-10 min-[810px]:py-24 min-[1200px]:py-28"
+      className="hidden sm:block scroll-mt-24 px-4  sm:px-6  min-[810px]:px-10 min-[810px]:py-24 min-[1200px]:pb-28"
     >
-      <div className="mx-auto w-full max-w-[1120px]">
+      <div className="mx-auto w-full max-w-[1080px]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65 }}
-          className="grid min-h-[230px] items-start gap-8 border-b border-white/[0.04]  min-[810px]:grid-cols-[minmax(0,1fr)_auto] min-[810px]:items-center min-[810px]:gap-14  "
+          className="grid mt-6 items-start gap-8 min-[810px]:grid-cols-[minmax(0,1fr)_auto] min-[810px]:items-end min-[810px]:gap-14  "
         >
           <div className="min-w-0">
             <p className="text-base leading-[1.3] text-[#858585]">

@@ -20,7 +20,7 @@ export default function WhyHabi() {
       id="why-habi"
       className="relative  px-4 sm:px-6  "
     >
-      <div className="mx-auto w-full max-w-[1120px]">
+      <div className="mx-auto w-full max-w-[1080px]">
         <motion.div
           style={{ y: headingY }}
           className="mb-10 max-w-[430px] sm:mb-14"
@@ -28,7 +28,7 @@ export default function WhyHabi() {
           <p className="text-base leading-none mb-2.5 tracking-[-0.02em] text-white/40">
             {"// Why Habi?"}
           </p>
-          <h2 className="text-[32px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
+          <h2 className="text-[29px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
             Your strategy,
             <br /> automated.
             <br />
@@ -37,8 +37,8 @@ export default function WhyHabi() {
         </motion.div>
 
         <div className="space-y-6 min-[810px]:space-y-16">
-          <article className="relative flex flex-col overflow-hidden rounded-[12px] bg-[#171615] p-2.5 sm:p-4 min-[810px]:sticky min-[810px]:top-24 min-[810px]:grid min-[810px]:min-h-[486px] min-[810px]:grid-cols-[1.22fr_0.98fr] min-[810px]:items-stretch">
-            <div className="relative aspect-[1.05/1] overflow-hidden rounded-[8px] sm:aspect-[1.35/1] min-[810px]:aspect-auto min-[810px]:min-h-0">
+          <article className="relative flex flex-col overflow-hidden rounded-xl bg-[#171615] p-2.5 sm:p-4 min-[810px]:sticky min-[810px]:top-24 min-[810px]:grid min-[810px]:min-h-[486px] min-[810px]:grid-cols-[1.22fr_0.98fr] min-[810px]:items-stretch">
+            <div className="relative aspect-[1.05/1] overflow-hidden rounded-lg w-full sm:aspect-[1.35/1] min-[810px]:aspect-auto min-[810px]:min-h-0">
               <Image
                 src="/images/private-agent.png"
                 alt=""
@@ -47,7 +47,7 @@ export default function WhyHabi() {
                 className="object-cover"
               />
               <motion.div
-                style={{ y: terminalY }}
+                // style={{ y: terminalY }}
                 className="absolute bottom-[7%] left-0 right-[5.5%] top-[-8] overflow-hidden bg-black shadow-[0_24px_70px_rgba(0,0,0,0.55)]"
               >
                 <Image
@@ -55,7 +55,7 @@ export default function WhyHabi() {
                   alt="Habi across Hyperliquid and Polymarket"
                   fill
                   sizes="(max-width: 809px) calc(100vw - 80px), 580px"
-                  className="object-cover object-right"
+                  className="object-cover object-bottom-right"
                 />
               </motion.div>
             </div>
@@ -70,14 +70,14 @@ export default function WhyHabi() {
               </p>
               <a
                 href="#pricing"
-                className="mt-6 rounded-[8px] bg-white px-4 py-3 text-base font-medium leading-none text-[#111] transition-transform hover:scale-[1.025]"
+                className="mt-6 rounded-lg bg-white px-4 py-3 text-base font-medium leading-none text-[#111] transition-transform hover:scale-[1.025]"
               >
                 Try Habi
               </a>
             </div>
           </article>
 
-          <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#171615] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-28 min-[810px]:grid min-[810px]:grid-cols-[2fr_3fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
+          <article className="relative flex flex-col-reverse sm:flex-col gap-2.5 overflow-hidden rounded-xl bg-[#171615] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-24 min-[810px]:grid min-[810px]:grid-cols-[2fr_3fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
             <div className="flex flex-col items-start justify-center px-4 py-8 min-[810px]:px-8">
               <h3 className="text-xl font-normal leading-[1.2] tracking-[-0.02em]">
                 Private by default. Powerful by design.
@@ -104,7 +104,7 @@ export default function WhyHabi() {
                 className="object-cover"
               />
               <motion.div
-                style={{ y: chatY }}
+                // style={{ y: chatY }}
                 className="absolute inset-[8%] overflow-hidden rounded-lg shadow-2xl"
               >
                 <Image
@@ -118,8 +118,8 @@ export default function WhyHabi() {
             </div>
           </article>
 
-          <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#171615] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-32 min-[810px]:grid min-[810px]:grid-cols-[3fr_2fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
-            <div className="relative aspect-[1.05/1] overflow-hidden rounded-[8px] sm:aspect-[1.35/1] min-[810px]:aspect-auto min-[810px]:min-h-0">
+          <article className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl bg-[#171615] p-2.5 sm:gap-4 min-[810px]:sticky min-[810px]:top-0 min-[810px]:grid min-[810px]:grid-cols-[3fr_2fr] min-[810px]:items-center min-[810px]:p-3 min-[1200px]:p-4">
+            <div className="relative aspect-[1.05/1] overflow-hidden rounded-lg sm:aspect-[1.35/1] min-[810px]:aspect-auto min-[810px]:min-h-0">
               <Image
                 src="/images/private-agent.png"
                 alt=""
@@ -128,7 +128,7 @@ export default function WhyHabi() {
                 className="object-cover"
               />
               <motion.div
-                style={{ y: terminalY }}
+                // style={{ y: terminalY }}
                 className="absolute bottom-[7%] left-8 right-0 top-[-8] overflow-hidden bg-black shadow-[0_24px_70px_rgba(0,0,0,0.55)]"
               >
                 <Image

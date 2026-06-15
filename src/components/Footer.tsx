@@ -82,15 +82,15 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-[#121110] px-4 py-14 sm:px-6 sm:py-16 min-[810px]:py-20">
-      <div className="mx-auto grid w-full max-w-[1120px] gap-12 min-[810px]:grid-cols-[1fr_auto] min-[810px]:items-start min-[810px]:gap-16 min-[1200px]:gap-28">
-        <div>
+      <div className="mx-auto grid w-full max-w-[1080px] gap-12 min-[810px]:grid-cols-[1fr_auto] min-[810px]:items-start min-[810px]:gap-16 min-[1200px]:gap-28">
+        <div className="order-2 sm:-order-1 ">
           <HabiBrand brandName="Exact" />
-          <p className="mt-5 max-w-[360px] text-[14px] leading-[1.3] text-[#858585]">
+          <p className="mt-5 max-w-[360px] text-sm leading-[1.3] text-[#858585]">
             The AI code editor built for precision.
             <br />
             Write less, build more, ship faster.
           </p>
-          <div className="mt-7 flex items-center gap-6">
+          <div className="mt-4 sm:mt-7 flex items-center gap-6">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
@@ -106,16 +106,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 min-[390px]:grid-cols-2 min-[390px]:gap-12 sm:gap-20 min-[1200px]:gap-24">
+        <div className="grid grid-cols-2 gap-10 min-[390px]:gap-12 sm:gap-20 min-[1200px]:gap-24">
           {[0, 1].map((column) => (
             <nav key={column} aria-label={`Footer navigation ${column + 1}`}>
-              <p className="text-base font-medium text-white">Navigation</p>
-              <div className="mt-6 space-y-5">
+              <p className="text-sm sm:text-base font-medium text-white">
+                Navigation
+              </p>
+              <div className="mt-6 space-y-3 sm:space-y-5">
                 {navigationLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    className="block text-base text-white/90 transition-colors hover:text-white"
+                    className="block text-sm sm:text-base text-white/90 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>

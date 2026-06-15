@@ -14,9 +14,9 @@ export default function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto grid w-full max-w-[1120px] overflow-hidden rounded-xl bg-[#121110] min-[810px]:grid-cols-[0.9fr_1.1fr]"
+        className="mx-auto grid w-full max-w-[1080px] overflow-hidden rounded-xl bg-[#121110] min-[810px]:grid-cols-[0.9fr_1.1fr] "
       >
-        <div className="flex min-h-[300px] flex-col items-start justify-center px-6 py-10 sm:min-h-[340px] sm:px-12 sm:py-12 min-[810px]:min-h-[390px] min-[1200px]:px-14">
+        <div className="order-2 sm:-order-1 flex min-h-[300px] flex-col items-start justify-center px-6 py-10 sm:min-h-[340px] sm:px-12 sm:py-12 min-[810px]:min-h-[390px] min-[1200px]:px-14">
           <h2 className="max-w-[360px] text-[32px] font-normal leading-[1.2] tracking-[-0.03em] min-[1200px]:text-[36px] min-[1200px]:leading-[1.1]">
             Start coding with precision today
           </h2>

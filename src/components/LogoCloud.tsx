@@ -105,8 +105,8 @@ function CompanyLogo({ name }: { name: LogoName }) {
 
 export default function LogoCloud() {
   return (
-    <section id="logos" className="flex px-4 sm:px-6  min-[810px]:py-24">
-      <div className="mx-auto w-full max-w-[1120px]">
+    <section id="logos" className="flex px-4 sm:px-6 py-12 min-[810px]:py-24">
+      <div className="mx-auto w-full max-w-[1080px]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export default function LogoCloud() {
           </p>
         </motion.div>
 
-        <div className="mx-auto mt-12 grid max-w-[800px] grid-cols-1 gap-y-10 min-[360px]:grid-cols-2 min-[360px]:gap-x-4 sm:mt-14 sm:gap-x-8 sm:gap-y-14 min-[810px]:mt-16 min-[810px]:grid-cols-4 min-[810px]:gap-x-12 min-[810px]:gap-y-16">
+        <div className="mx-auto mt-12 grid max-w-[800px] grid-cols-2 gap-y-10 min-[360px]:grid-cols-2 min-[360px]:gap-x-4 sm:mt-14 sm:gap-x-8 sm:gap-y-14 min-[810px]:mt-16 min-[810px]:grid-cols-4 min-[810px]:gap-x-12 min-[810px]:gap-y-16">
           {companies.map((company, index) => (
             <motion.div
               key={`${company}-${index}`}
