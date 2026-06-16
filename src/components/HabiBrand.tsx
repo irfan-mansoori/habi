@@ -18,7 +18,7 @@ export default function HabiBrand({
       <svg
         aria-hidden="true"
         viewBox="0 0 30 24"
-        className={compact ? "h-5 w-[25px]" : "h-6 w-[30px]"}
+        className={compact ? "h-5 w-[30px]" : "h-6 w-[22px]"}
         fill="none"
         stroke="currentColor"
         strokeWidth="1.7"

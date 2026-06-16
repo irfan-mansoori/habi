@@ -109,7 +109,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 min-[390px]:gap-12 sm:gap-20 min-[1200px]:gap-24">
           {[0, 1].map((column) => (
             <nav key={column} aria-label={`Footer navigation ${column + 1}`}>
-              <p className="text-sm sm:text-base font-medium text-white">
+              <p className="text-sm sm:text-sm font-medium text-white">
                 Navigation
               </p>
               <div className="mt-6 space-y-3 sm:space-y-5">
@@ -117,7 +117,7 @@ export default function Footer() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="block text-sm sm:text-base text-white/90 transition-colors hover:text-white"
+                    className="block text-sm sm:text-sm text-white/90 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>

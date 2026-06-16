@@ -22,7 +22,7 @@ export default function Hero() {
                 delay: 0.1 + index * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-[56px] leading-[1.2] tracking-[-0.03em] text-white min-[1200px]:leading-none"
+              className="text-[56px] leading-[1.2] tracking-[-0.07em] text-white min-[1200px]:leading-none"
             >
               {line}
             </motion.h1>
