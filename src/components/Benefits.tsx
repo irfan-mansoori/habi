@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
 import { benefits } from "@/src/data/site-content";
 
 type BenefitIcon = (typeof benefits)[number]["icon"];
@@ -66,10 +69,27 @@ function Icon({ name }: { name: BenefitIcon }) {
 }
 
 export default function Benefits() {
+  const shouldReduceMotion = useReducedMotion();
+  const revealInitial = shouldReduceMotion
+    ? { opacity: 1, y: 0, filter: "blur(0px)" }
+    : { opacity: 0, y: 34, filter: "blur(8px)" };
+  const revealAnimate = { opacity: 1, y: 0, filter: "blur(0px)" };
+  const revealTransition = {
+    duration: shouldReduceMotion ? 0 : 0.85,
+    ease: [0.22, 1, 0.36, 1] as const,
+  };
+
   return (
     <section id="benefits" className="scroll-mt-24 px-4 sm:px-6 pt-10 sm:pt-0">
       <div className="mx-auto w-full max-w-[1080px]">
-        <div className="max-w-3xl">
+        <motion.div
+          initial={revealInitial}
+          whileInView={revealAnimate}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={revealTransition}
+          className="max-w-3xl"
+          style={{ willChange: "transform, opacity, filter" }}
+        >
           <p className="text-[14px] leading-none tracking-[-0.02em] text-white/40">
             {"// Benefits"}
           </p>
@@ -77,12 +97,20 @@ export default function Benefits() {
             Ship faster.
             <span className="text-white/40"> Code better.</span>
           </h2>
-        </div>
+        </motion.div>
         <div className="mt-10 grid gap-3.5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
-          {benefits.map((benefit) => (
-            <article
+          {benefits.map((benefit, index) => (
+            <motion.article
               key={benefit.title}
+              initial={revealInitial}
+              whileInView={revealAnimate}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                ...revealTransition,
+                delay: shouldReduceMotion ? 0 : index * 0.055,
+              }}
               className="flex min-h-auto flex-col rounded-[9px] bg-[#171615] p-5 transition-colors duration-300 hover:bg-[#191818] sm:min-h-[190px] sm:p-6"
+              style={{ willChange: "transform, opacity, filter" }}
             >
               <span className="grid size-12 place-items-center rounded-full bg-[#080808] text-[#f4f4f2] sm:size-[64px]">
                 <Icon name={benefit.icon} />
@@ -93,7 +121,7 @@ export default function Benefits() {
               <p className="mt-2.5 max-w-[360px] text-base leading-[1.3] text-white/45">
                 {benefit.description}
               </p>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

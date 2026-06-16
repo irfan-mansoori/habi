@@ -53,7 +53,7 @@ export default function CTA() {
               className="absolute left-[5%] top-[10%] h-[92%] w-[108%] overflow-hidden rounded-lg border border-white/10 bg-black shadow-[0_28px_75px_rgba(0,0,0,0.65)] sm:left-[8%] sm:top-[13%]"
             >
               <Image
-                src="/images/cta-market.png"
+                src="/images/new-cta-market.png"
                 alt="Habi market browser"
                 fill
                 sizes="(max-width: 809px) 120vw, 640px"

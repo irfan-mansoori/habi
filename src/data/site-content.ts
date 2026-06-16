@@ -9,22 +9,22 @@ export const navItems = [
 export const coreFeatures = [
   {
     title: "Risks Engine",
-    image: "/images/core-vault.png",
+    image: "/images/new-core-vault.png",
     alt: "Habi risk engine and trade controls",
   },
   {
     title: "Artifacts",
-    image: "/images/core-risk.png",
+    image: "/images/new-core-risk.png",
     alt: "Habi market research artifact and funding analysis",
   },
   {
     title: "Vault",
-    image: "/images/core-artifact.png",
+    image: "/images/new-core-artifact.png",
     alt: "Habi vault management dashboard",
   },
   {
     title: "Strategies",
-    image: "/images/core-strategy.png",
+    image: "/images/new-core-strategy.png",
     alt: "Habi trading strategy workspace",
   },
 ];

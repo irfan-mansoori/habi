@@ -1,11 +1,20 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import { faqs } from "@/src/data/site-content";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const shouldReduceMotion = useReducedMotion();
+  const revealInitial = shouldReduceMotion
+    ? { opacity: 1, y: 0, filter: "blur(0px)" }
+    : { opacity: 0, y: 34, filter: "blur(8px)" };
+  const revealAnimate = { opacity: 1, y: 0, filter: "blur(0px)" };
+  const revealTransition = {
+    duration: shouldReduceMotion ? 0 : 0.85,
+    ease: [0.22, 1, 0.36, 1] as const,
+  };
 
   return (
     <section
@@ -13,7 +22,14 @@ export default function FAQ() {
       className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[760px] lg:py-[70px]"
     >
       <div className="mx-auto grid w-full max-w-[1080px] min-w-0 gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] lg:gap-14">
-        <div className="min-w-0">
+        <motion.div
+          initial={revealInitial}
+          whileInView={revealAnimate}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={revealTransition}
+          className="min-w-0"
+          style={{ willChange: "transform, opacity, filter" }}
+        >
           <p className="text-[14px] leading-none tracking-[-0.02em] text-white/40">
             {"// FAQ"}
           </p>
@@ -21,16 +37,24 @@ export default function FAQ() {
             Questions?{" "}
             <span className="text-white/40">We&apos;ve got answers.</span>
           </h2>
-        </div>
+        </motion.div>
         <div className="flex min-w-0 flex-col gap-3 sm:gap-5">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             const answerId = `faq-answer-${index}`;
 
             return (
-              <div
+              <motion.div
                 key={faq.question}
+                initial={revealInitial}
+                whileInView={revealAnimate}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{
+                  ...revealTransition,
+                  delay: shouldReduceMotion ? 0 : index * 0.055,
+                }}
                 className="overflow-hidden rounded-[10px] bg-[#151414]"
+                style={{ willChange: "transform, opacity, filter" }}
               >
                 <button
                   type="button"
@@ -65,7 +89,7 @@ export default function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
         </div>
