@@ -25,7 +25,7 @@ export const coreFeatures = [
   {
     title: "Strategies",
     image: "/images/new-core-strategy.png",
-    alt: "Habi trading strategy workspace",
+    alt: "Habi trading strategy workspace with agent reasoning and trade plan",
   },
 ];
 
