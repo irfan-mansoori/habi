@@ -1,4 +1,4 @@
-import HabiBrand from "@/src/components/HabiBrand";
+import Image from "next/image";
 
 const navigationLinks = [
   { label: "Features", href: "#features" },
@@ -84,7 +84,19 @@ export default function Footer() {
     <footer className="bg-[#121110] px-4 py-14 sm:px-6 sm:py-16 min-[810px]:py-20">
       <div className="mx-auto grid w-full max-w-[1080px] gap-12 min-[810px]:grid-cols-[1fr_auto] min-[810px]:items-start min-[810px]:gap-16 min-[1200px]:gap-28">
         <div className="order-2 sm:-order-1 ">
-          <HabiBrand brandName="Exact" />
+          <a
+            href="#"
+            aria-label="Habi home"
+            className="relative block h-8 w-[88px] shrink-0"
+          >
+            <Image
+              src="/images/Habi white.svg"
+              alt="Habi"
+              fill
+              sizes="88px"
+              className="object-contain"
+            />
+          </a>
           <p className="mt-5 max-w-[360px] text-sm leading-[1.3] text-[#858585]">
             The AI code editor built for precision.
             <br />

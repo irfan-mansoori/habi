@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { navItems } from "@/src/data/site-content";
-import HabiBrand from "@/src/components/HabiBrand";
 
 const container = {
   hidden: {},
@@ -29,7 +29,6 @@ const menuItemVariants: Variants = {
   },
 };
 
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -44,7 +43,20 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-[9999] bg-[#0a0908] px-4 sm:px-6 min-[810px]:px-10">
       <nav className="mx-auto flex h-16 max-w-[1080px] items-center justify-between px-0 text-white">
-        <HabiBrand compact />
+        <a
+          href="#"
+          aria-label="Habi home"
+          className="relative block h-8 w-[88px] shrink-0"
+        >
+          <Image
+            src="/images/Habi white.svg"
+            alt="Habi"
+            fill
+            sizes="88px"
+            className="object-contain"
+            priority
+          />
+        </a>
 
         <div className="hidden items-center gap-2 text-base text-[#dedede] lg:flex xl:gap-4 pl-8">
           {navItems.map((item) => (
