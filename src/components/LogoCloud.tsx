@@ -57,6 +57,7 @@ function AnylayerMark() {
         alt=""
         width={32}
         height={32}
+        unoptimized
         className="size-full scale-200 object-contain"
       />
     </div>
