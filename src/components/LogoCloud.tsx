@@ -21,7 +21,7 @@ const companies: LogoName[] = [
   "CloudSync",
 ];
 
-const anylayerImage = "/images/anylayer.svg";
+const anylayerImage = "/images/anylayer-logo.svg";
 
 function SignFlowMark() {
   return (
