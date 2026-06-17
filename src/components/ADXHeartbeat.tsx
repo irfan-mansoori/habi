@@ -67,11 +67,25 @@ export default function ADXHeartbeat() {
           whileInView={animate}
           viewport={{ once: true, margin: "-70px" }}
           transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.08 }}
-          className="mt-10 overflow-hidden rounded-[9px] bg-[#171615] min-[810px]:mt-12"
+          className="relative mt-10 overflow-hidden rounded-[9px] bg-[#171615] min-[810px]:mt-12"
           style={{ willChange: "transform, opacity, filter" }}
         >
-          <div className="grid min-h-[374px] gap-8 px-6 py-8 sm:px-10 min-[810px]:grid-cols-[0.92fr_1.08fr] min-[810px]:items-center min-[810px]:px-12 min-[810px]:py-10">
-            <div className="max-w-[380px]">
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(circle at 73% 50%, rgba(255,255,255,0.17) 0%, rgba(255,255,255,0.11) 23%, rgba(255,255,255,0.045) 39%, rgba(0,0,0,0.18) 64%, transparent 82%)",
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(23,22,21,0.98) 0%, rgba(23,22,21,0.78) 44%, rgba(23,22,21,0.22) 70%, rgba(23,22,21,0.42) 100%)",
+            }}
+          />
+          <div className="relative grid min-h-[374px] gap-8 px-6 py-8 sm:px-10 min-[810px]:grid-cols-[0.92fr_1.08fr] min-[810px]:items-center min-[810px]:px-12 min-[810px]:py-10">
+            <div className="relative z-10 max-w-[380px]">
               {adxFeatures.map((feature, index) => (
                 <div
                   key={feature.title}
@@ -101,7 +115,8 @@ export default function ADXHeartbeat() {
             </div>
 
             <div className="relative mx-auto flex h-[260px] w-full max-w-[430px] items-center justify-center min-[810px]:h-[330px] min-[1200px]:h-[360px]">
-              <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(118,82,255,0.2)_0%,rgba(118,82,255,0.08)_30%,transparent_67%)]" />
+              <div className="absolute left-1/2 top-1/2 h-[92%] w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/8 blur-3xl" />
+              <div className="absolute bottom-[12%] left-1/2 h-[18%] w-[62%] -translate-x-1/2 rounded-full bg-black/60 blur-2xl" />
               <motion.div
                 initial={
                   shouldReduceMotion
@@ -117,11 +132,11 @@ export default function ADXHeartbeat() {
                 className="relative h-[220px] w-[220px] min-[810px]:h-[285px] min-[810px]:w-[285px] min-[1200px]:h-[310px] min-[1200px]:w-[310px]"
               >
                 <Image
-                  src="/images/gemini-icon.svg"
+                  src="/images/gemini-coin.svg"
                   alt="$ADX token"
                   fill
                   sizes="(max-width: 809px) 220px, 310px"
-                  className="object-contain scale-125 drop-shadow-[0_30px_42px_rgba(35,17,122,0.55)]"
+                  className="scale-125 object-contain drop-shadow-[0_30px_22px_rgba(0,0,0,0.86)]"
                 />
               </motion.div>
             </div>

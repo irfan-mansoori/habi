@@ -12,7 +12,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="hidden sm:block scroll-mt-24 px-4  sm:px-6  min-[810px]:px-10 min-[810px]:py-24 min-[1200px]:pb-28"
+      className=" scroll-mt-24 px-4  sm:px-6  min-[810px]:px-10 min-[810px]:py-24 min-[1200px]:pb-28"
     >
       <div className="mx-auto w-full max-w-[1080px]">
         <motion.div
