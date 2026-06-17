@@ -21,6 +21,8 @@ const companies: LogoName[] = [
   "CloudSync",
 ];
 
+const anylayerImage = "/images/anylayer.svg";
+
 function SignFlowMark() {
   return (
     <svg
@@ -53,7 +55,7 @@ function AnylayerMark() {
   return (
     <div className="flex size-8 shrink-0 items-center justify-center">
       <Image
-        src="/images/anylayer.svg"
+        src={anylayerImage}
         alt=""
         width={32}
         height={32}
