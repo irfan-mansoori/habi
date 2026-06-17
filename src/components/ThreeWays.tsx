@@ -124,7 +124,7 @@ export default function ThreeWays() {
           viewport={{ once: true, margin: "-80px" }}
           transition={transition}
         >
-          <p className="text-sm md:text-xl leading-[1.3] text-[#858585]">
+          <p className="text-sm leading-[1.3] text-[#858585]">
             <span className="text-white/35">{`// `}</span>
             Three ways to code
           </p>

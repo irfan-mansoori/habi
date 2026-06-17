@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 
 const desktopLines = ["AI agents", "that trade the way you do."];
 const mobileLines = ["AI agents", "that trade the way you do."];
+const lines = [
+  ["AI", "agents"],
+  ["that", "trade", "the", "way", "you", "do."]
+];
 
 export default function Hero() {
   return (
@@ -12,21 +16,51 @@ export default function Hero() {
       {/* <div className="hero-glow absolute inset-x-0 top-0 -z-10 h-[760px]" /> */}
       <div className="mx-auto max-w-[1080px] text-center">
         <div className="mx-auto hidden max-w-3xl min-[810px]:block">
-          {desktopLines.map((line, index) => (
-            <motion.h1
-              key={line}
-              initial={{ opacity: 0, y: 42 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.1 + index * 0.08,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="text-[56px] leading-[1.2] tracking-[-0.07em] text-white min-[1200px]:leading-none"
-            >
-              {line}
-            </motion.h1>
-          ))}
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.045,
+                },
+              },
+            }}
+            className="text-[56px] leading-[1.05] tracking-[-0.07em] text-white"
+          >
+            {lines.map((line, lineIndex) => (
+              <div key={lineIndex}>
+                {line.map((word, index) => (
+                  <motion.span
+                    key={word}
+                    variants={{
+                      hidden: {
+                        opacity: 0,
+                        y: 24,
+                        filter: "blur(8px)",
+                      },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        filter: "blur(0px)",
+                        transition: {
+                          duration: 0.65,
+                          ease: [0.16, 1, 0.3, 1],
+                        },
+                      },
+                    }}
+                    style={{
+                      display: "inline-block",
+                      marginRight: "0.28em",
+                    }}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </div>
+            ))}
+          </motion.h1>
         </div>
         <div className="mx-auto max-w-sm min-[810px]:hidden">
           {mobileLines.map((line, index) => (
