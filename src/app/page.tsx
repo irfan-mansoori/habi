@@ -1,3 +1,4 @@
+import ADXHeartbeat from "@/src/components/ADXHeartbeat";
 import Benefits from "@/src/components/Benefits";
 import CTA from "@/src/components/CTA";
 import FAQ from "@/src/components/FAQ";
@@ -20,6 +21,7 @@ export default function Home() {
         <Features />
         <Benefits />
         <ThreeWays />
+        <ADXHeartbeat />
         <FAQ />
         <CTA />
         <Footer />
