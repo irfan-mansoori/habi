@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { navItems } from "@/src/data/site-content";
 import HabiBrand from "@/src/components/HabiBrand";
 
@@ -14,7 +14,7 @@ const container = {
   },
 };
 
-const item = {
+const menuItemVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 16,
@@ -24,10 +24,11 @@ const item = {
     y: 0,
     transition: {
       duration: 0.45,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
     },
   },
 };
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -147,7 +148,7 @@ export default function Navbar() {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  variants={item}
+                  variants={menuItemVariants}
                   onClick={() => setOpen(false)}
                   className="
                     text-[34px]
@@ -161,7 +162,7 @@ export default function Navbar() {
               ))}
 
               <motion.a
-                variants={item}
+                variants={menuItemVariants}
                 href="#pricing"
                 onClick={() => setOpen(false)}
                 className="
