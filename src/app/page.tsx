@@ -5,6 +5,7 @@ import Features from "@/src/components/Features";
 import Footer from "@/src/components/Footer";
 import Hero from "@/src/components/Hero";
 import LogoCloud from "@/src/components/LogoCloud";
+import ThreeWays from "@/src/components/ThreeWays";
 import Navbar from "@/src/components/Navbar";
 import WhyHabi from "@/src/components/WhyHabi";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <WhyHabi />
         <Features />
         <Benefits />
+        <ThreeWays />
         <FAQ />
         <CTA />
         <Footer />
