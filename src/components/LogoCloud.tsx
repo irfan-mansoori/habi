@@ -1,12 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
-type LogoName = "SignFlow" | "CloudSync" | "NotionKit" | "DataStream";
+type LogoName =
+  | "SignFlow"
+  | "Anylayer"
+  | "CloudSync"
+  | "NotionKit"
+  | "DataStream";
 
 const companies: LogoName[] = [
   "SignFlow",
-  "CloudSync",
+  "Anylayer",
   "NotionKit",
   "DataStream",
   "NotionKit",
@@ -40,6 +46,20 @@ function CloudSyncMark() {
       <circle cx="16" cy="16" r="14" />
       <path d="m18.3 7-8 10.2h5.1L13.7 25l8-10.2h-5.1L18.3 7Z" fill="#080808" />
     </svg>
+  );
+}
+
+function AnylayerMark() {
+  return (
+    <div className="flex size-8 shrink-0 items-center justify-center">
+      <Image
+        src="/images/anylayer.svg"
+        alt=""
+        width={32}
+        height={32}
+        className="size-full scale-200 object-contain"
+      />
+    </div>
   );
 }
 
@@ -85,6 +105,7 @@ function CompanyLogo({ name }: { name: LogoName }) {
   return (
     <div className="flex min-w-0 items-center justify-center gap-2 whitespace-nowrap text-white sm:gap-2.5">
       {name === "SignFlow" && <SignFlowMark />}
+      {name === "Anylayer" && <AnylayerMark />}
       {name === "CloudSync" && <CloudSyncMark />}
       {name === "DataStream" && <DataStreamMark />}
       <span
